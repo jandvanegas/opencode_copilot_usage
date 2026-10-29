@@ -1,0 +1,49 @@
+{
+  "name": "opencode-copilot-usage",
+  "version": "0.1.0",
+  "description": "Show your GitHub Copilot premium-request usage in the opencode TUI (sidebar + prompt label) and via /copilot-usage.",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "github-copilot",
+    "usage"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./server": {
+      "import": "./src/server.ts"
+    },
+    "./tui": {
+      "import": "./src/tui.tsx"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "opencode": ">=1.19.0 <2"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*",
+    "@opentui/core": ">=0.1.101",
+    "@opentui/solid": ">=0.1.101",
+    "solid-js": "*"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    },
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  }
+}
